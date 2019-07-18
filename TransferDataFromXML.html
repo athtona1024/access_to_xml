@@ -10,11 +10,11 @@
 	 xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
 	 xmlDoc.async=false;
 	 xmlDoc.load("Data.xml");
-   }catch(e){
-   	 xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
+   }catch(e){//Firefox, Mozilla, Opera, etc
+   	 var xmlDoc=document.implementation.createDocument("","",null);
 	 xmlDoc.async=false;
 	 xmlDoc.load("Data.xml");
-   }catch(e){
+   }catch(e){//Chrome
    	 var xmlhttp=new window.XMLHttpRequest();
    	 xmlhttp.open("get","Data.xml",false);
    	 xmlhttp.send(null);
