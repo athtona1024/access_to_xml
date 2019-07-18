@@ -6,8 +6,7 @@
 <script language="javascript">
  function window_onload(){
 	 try{
-   	 var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");*///此定义方式为internet使用，已被弃用
-	 xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
+   	 var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");///此定义方式为internet使用，已被弃用
 	 xmlDoc.async=false;
 	 xmlDoc.load("Data.xml");
    }catch(e){
@@ -16,7 +15,7 @@
 	 xmlDoc.async=false;
 	 xmlDoc.load("Data.xml");
    }catch(e){
-   try{//Chrome
+   try{//Chrom
    	 var xmlhttp=new window.XMLHttpRequest();
    	 xmlhttp.open("get","Data.xml",false);
    	 xmlhttp.send(null);
