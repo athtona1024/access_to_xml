@@ -6,19 +6,19 @@
 <script language="javascript">
  function window_onload(){
 	 try{
-   var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");*///此定义方式为internet使用，已被弃用
+   	 var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");*///此定义方式为internet使用，已被弃用
 	 xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
 	 xmlDoc.async=false;
-	 xmlDoc.load("10-82.xml");
+	 xmlDoc.load("Data.xml");
    }catch(e){
-   xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
+   	 xmlDoc=document.implementation.createDocument("","",null);//Firefox, Mozilla, Opera, etc
 	 xmlDoc.async=false;
-	 xmlDoc.load("10-82.xml");
+	 xmlDoc.load("Data.xml");
    }catch(e){
-   var xmlhttp=new window.XMLHttpRequest();
-   xmlhttp.open("get","10-82.xml",false);
-   xmlhttp.send(null);
-   xmlDoc=xmlhttp.responseXML.documentElement;
+   	 var xmlhttp=new window.XMLHttpRequest();
+   	 xmlhttp.open("get","Data.xml",false);
+   	 xmlhttp.send(null);
+   	 xmlDoc=xmlhttp.responseXML.documentElement;
    }
 	 var nodes=xmlDoc.documentElement.childNodes;
 	 menu1.innerText=nodes.item[0].text;
